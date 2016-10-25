@@ -1,0 +1,36 @@
+{
+  "name": "chulakov.test",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Тестовое задание Front-end Developer",
+  "author": "Лопатин Денис",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laplandin/test-project"
+  },
+  "bugs": {
+    "url": "deniskakhv@gmail.com"
+  },
+  "homepage": "https://github.com/laplandin/test-project",
+  "devDependencies": {
+    "autoprefixer": "6.4.1",
+    "browser-sync": "2.15.0",
+    "del": "^2.2.2",
+    "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp style",
+    "start": "gulp serve",
+    "copy": "gulp copy",
+    "symbols": "gulp symbols"
+  },
+  "engines": {
+    "node": "6.5"
+  }
+}
