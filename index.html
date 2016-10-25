@@ -3,10 +3,108 @@
   <head>
     <meta charset="utf-8">
     <title>Chulakov.test</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <div class="container">
+      <header class="page-header">
+        <ul class="page-header__navigation">
+          <li class="page-header__logo">
+            <img src="../img/logo.png" alt="CHULAKOV.RU" width="176px" height="36px">
+          </li>
+          <li class="page-header__link">Первая ссылка</li>
+          <li class="page-header__link">Вторая ссылка</li>
+          <li class="page-header__link">Третья ссылка</li>
+          <li class="page-header__link--personal">Личный кабинет</li>
+          <li class="page-header__link--exit">Выйти</li>
+        </ul>
+      </header>
+      <main class="content">
+        <section class="title">
+          <h1 class="title__page-title">Заголовок страницы</h1>
+          <p class="title__description">
+            В отличие от пылевого и ионного хвостов,направление поступает
+            в лимногляциальный часовой угол
+          </p>
+        </section>
+        <form class="payment" action="index.html" method="post">
+          <table class="payment__info">
+            <caption class="payment__info-caption">Информация по оплате</caption>
+            <tr>
+              <td class="payment__info-property">Номер счёта</td>
+              <td class="payment__info-value">
+                <span>87123658716587</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="payment__info-property">Сумма платежа</td>
+              <td class="payment__info-value">
+                <span>100 руб.</span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="payment__credit-card-data">Данные банковской карты</h2>
+          <div class="payment__credit-card-front">
+            <span class="payment__credit-card-number">Номер карты</span>
+            <input type="text" class="payment__quarter-group">
+            <input type="text" class="payment__quarter-group">
+            <input type="text" class="payment__quarter-group">
+            <input type="text" class="payment__quarter-group">
+            <span class="payment__credit-card-expiry-date">Срок действия</span>
+            <select class="payment__month" name="payment__month">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="10">11</option>
+              <option value="12">12</option>
+            </select>
+            <select class="payment__year" name="payment__year">
+              <option value="">2016</option>
+              <option value="">2017</option>
+              <option value="">2018</option>
+              <option value="">2019</option>
+              <option value="">2020</option>
+              <option value="">2021</option>
+            </select>
+            <input type="text" name="card-holder" value="" placeholder="Держатель карты">
+          </div>
+          <div class="payment__credit-card-back">
+            <span class="payment__cvv">Код CVV2/CVC2</span>
+            <input type="number" name="name" value="" min="0" max="999">
+          </div>
+          <input type="submit" name="payment__pay" value="Оплатить">
+        </form>
+        <section class="transaction-terms">
+          <p class="transaction-terms__text">
+            Исходя из астатической системы координат Булгакова, соединение стабильно.
+            Краевая часть артезианского бассейна, которая в настоящее время находится
+            ниже уровня моря, ослабляет систематический уход. Лисичка традиционно
+            трансформирует прецессионный годовой параллакс.
+          </p>
+          <p class="transaction-terms__text">Выклинивание абсолютно аккумулирует
+            твердый pадиотелескоп Максвелла.
+          </p>
+          <p class="transaction-terms__text">Алмаз слагает горст. Делювий длительно
+            колеблет лазерный подвижный объект.
+          </p>
+          <p class="transaction-terms__text">Устойчивость, например, параллельна.
+            Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий
+            диабаз. Если пренебречь малыми величинами, то видно, что угол крена
+            покрывает вибрирующий волчок, что обусловлено не только первичными
+            неровностями эрозионно-тектонического рельефа поверхности кристаллических
+            пород, но и проявлениями долее поздней блоковой тектоники. Засветка
+            неба заставляет иначе взглянуть на то, что такое волчок.
+          </p>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

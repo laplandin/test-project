@@ -49,6 +49,5 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["copyHtml"]);
-  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("*.html").on("change", server.reload);
 });
