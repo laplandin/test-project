@@ -1,5 +1,16 @@
 .payment {
-  padding: 22px 30px 30px;
+  position: relative;
+  min-height: 550px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 22px 30px 0;
+
+  box-sizing: border-box;
+
+  input:valid {
+    box-shadow: inset 0 0 3px 1px #99c100;
+  }
 }
 
 .payment__info {
@@ -37,15 +48,24 @@
   .font(@open-sans, 22px, 22.5px);
 }
 
+.payment__card-wrapper {
+  position: relative;
+  min-height: 256px;
+}
+
 .payment__card-front {
   position: relative;
   width: 350px;
+  min-height: 230px;
   padding: 0 18px;
 
   border: 1px solid #e5eaef;
-  border-radius: 10px;
+  border-radius: 15px;
+  background-color: #f7f8f8;
 
   box-sizing: border-box;
+
+  z-index: 10;
 }
 
 .payment__card-number {
@@ -69,6 +89,8 @@
 .payment__card-expiry-date {
   display: block;
   margin: 12px 0 4px 0;
+
+  color: #8494ab;
 }
 
 .payment__select-month {
@@ -92,9 +114,87 @@
   width: 100%;
   height: 40px;
   margin: 14px 0 10px;
+  padding-left: 15px;
+
+  color: #8494ab;
+  .font(@arial, 16px, 21px);
 
   border: 1px solid #e5eaef;
 
   box-sizing: border-box;
+}
+
+.payment__card-back {
+  position: absolute;
+  width: 368px;
+  min-height: 236px;
+  padding: 0 18px;
+
+  bottom: 0;
+  right: 0;
+
+  text-align: right;
+
+  border: 1px solid #e5eaef;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+  background-color: #f7f8f8;
+
+  z-index: 5;
+
+  &::before {
+     content: "";
+
+     display: block;
+     position: absolute;
+     width: 100%;
+     height: 40px;
+     background-color: #e4e9ee;
+
+     top: 25px;
+     left: 0;
+  }
+}
+
+.payment__cvv-wrapper {
+  display: inline-block;
+  margin-top: 84px;
+}
+
+.payment__cvv {
+  display: block;
+
+  color: #8494ab;
+  .font(@arial, 16px, 21px);
+}
+
+.payment__cvv-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-weight: 400;
+
+  border: 1px solid #e5eaef;
+}
+
+.payment__submit {
+  width: 172px;
+  height: 40px;
+  margin: 16px 0 20px;
+
+  color: #ffffff;
+  .font(@open-sans, 14px, 40px);
+  vertical-align: middle;
+
+  background-color: #99c100;
+  border-radius: 2px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0% , rgba(255, 255, 255, 0.2) 100% );
+  outline: none;
+  border: none;
+
+  &:active {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0% , rgba(255, 255, 255, 0.2) 100% );
+  }
 }
 

@@ -54,42 +54,46 @@
             </tr>
           </table>
           <h2 class="payment__card-data">Данные банковской карты</h2>
-          <div class="payment__card-front">
-            <span class="payment__card-number">Номер карты</span>
-            <input type="text" class="payment__card-number-quarter-group">
-            <input type="text" class="payment__card-number-quarter-group">
-            <input type="text" class="payment__card-number-quarter-group">
-            <input type="text" class="payment__card-number-quarter-group">
-            <span class="payment__card-expiry-date">Срок действия</span>
-            <select class="payment__select-month" name="payment__month">
-              <option value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              <option value="06">06</option>
-              <option value="07">07</option>
-              <option value="08">08</option>
-              <option value="09">09</option>
-              <option value="10">10</option>
-              <option value="10">11</option>
-              <option value="12">12</option>
-            </select>
-            <select class="payment__select-year" name="payment__year">
-              <option value="">2016</option>
-              <option value="">2017</option>
-              <option value="">2018</option>
-              <option value="">2019</option>
-              <option value="">2020</option>
-              <option value="">2021</option>
-            </select>
-            <input class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты">
+          <div class="payment__card-wrapper">
+            <div class="payment__card-front">
+              <span class="payment__card-number">Номер карты</span>
+              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <span class="payment__card-expiry-date">Срок действия</span>
+              <select class="payment__select-month" name="payment__month">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="10">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="payment__select-year" name="payment__year">
+                <option value="">2016</option>
+                <option value="">2017</option>
+                <option value="">2018</option>
+                <option value="">2019</option>
+                <option value="">2020</option>
+                <option value="">2021</option>
+              </select>
+              <input class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" pattern="[A-Za-z]{4,}" required>
+            </div>
+            <div class="payment__card-back">
+              <div class="payment__cvv-wrapper">
+                <span class="payment__cvv">Код CVV2/CVC2</span>
+              <input class="payment__cvv-input" type="text" name="name" value="" pattern="[0-9]{3}" required>
+              </div>
+            </div>
           </div>
-          <div class="payment__credit-card-back">
-            <span class="payment__cvv">Код CVV2/CVC2</span>
-            <input type="number" name="name" value="" min="0" max="999">
-          </div>
-          <input type="submit" name="payment__pay" value="Оплатить">
+          <input class="payment__submit" type="submit" name="payment__pay" value="Оплатить">
         </form>
         <section class="transaction-terms">
           <p class="transaction-terms__text">
