@@ -1,6 +1,6 @@
 .page-header {
   float: left;
-  width: 321px;
+  width: 324px;
 }
 
 .page-header__navigation {
@@ -9,8 +9,16 @@
   padding: 0;
 }
 
+.page-header__index-link {
+  line-height: 190px;
+  margin-left: 30px;
+}
+
 .page-header__logo {
   height: 162px;
+  background-color: #1f2229;
+  border-bottom: 2px solid lighten(#20232b, 4);
+  // box-sizing: border-box;
 }
 
 .page-header__item {
@@ -21,11 +29,15 @@
   background-color: #1f2229;
 
   &:hover {
-    background-color: #1f2229;
+    background-color: lighten(#1f2229, 10%);
   }
 
   &:active {
     color: #808592;
+    background-color: darken(#1f2229, 10%);
+  }
+
+  &--active {
     background-color: #2a2d37;
   }
 
@@ -52,5 +64,6 @@
 
   &--exit {
     padding: 29px 0 28px 30px;
+    border-top: 2px solid #20232b;
   }
 }
