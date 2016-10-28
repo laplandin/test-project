@@ -200,3 +200,37 @@
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0% , rgba(255, 255, 255, 0.2) 100% );
   }
 }
+
+@media @tablet-widths {
+  .payment__card-front {
+    width: 100%;
+  }
+
+  .payment__card-back {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    left: 0;
+  }
+}
+
+@media @mobile-width {
+  .payment {
+    padding-bottom: 1px;
+  }
+
+  .payment__card-number-quarter-group {
+    width: 49px;
+    margin-right: 0;
+  }
+
+  .payment__card-back {
+    min-height: 180px;
+  }
+
+  .payment__submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
