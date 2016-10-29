@@ -39,7 +39,7 @@
             В&nbsp;отличие от&nbsp;пылевого и&nbsp;ионного хвостов,направление поступает в&nbsp;лимногляциальный часовой угол
           </p>
         </section>
-        <form class="payment" action="index.html" method="post">
+        <form onsubmit="validate();return false" class="payment" action="" method="post">
           <table class="payment__info">
             <caption class="payment__info-caption">Информация по оплате</caption>
             <tr class="payment__cash-number">
@@ -59,10 +59,10 @@
           <div class="payment__card-wrapper">
             <div class="payment__card-front">
               <span class="payment__card-number">Номер карты</span>
-              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input id="quaterGroup1" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input id="quaterGroup2" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input id="quaterGroup3" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input id="quaterGroup4" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
               <span class="payment__card-expiry-date">Срок действия</span>
               <select class="payment__select-month" name="payment__month">
                 <option value="01">01</option>
@@ -86,12 +86,12 @@
                 <option value="">2020</option>
                 <option value="">2021</option>
               </select>
-              <input class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" pattern="[A-Za-z]{4,}" required>
+              <input id="cardHolder" class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" required>
             </div>
             <div class="payment__card-back">
               <div class="payment__cvv-wrapper">
                 <span class="payment__cvv">Код CVV2/CVC2</span>
-              <input class="payment__cvv-input" type="text" name="name" value="" pattern="[0-9]{3}" required>
+              <input id="cvv" class="payment__cvv-input" type="text" name="name" value="" pattern="[0-9]{3}" required>
               </div>
             </div>
           </div>
@@ -117,5 +117,6 @@
         </section>
       </main>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
