@@ -46,3 +46,23 @@ function validate() {
 function isTrue(boolean) {
   return boolean == true;
 }
+
+// Функция трансляции выбранного option выбора месяца в стилизованный span
+function selectMonth() {
+  var selectMonth = document.getElementById('payment__select-month');
+  var selectMonthIndex = selectMonth.options.selectedIndex;
+  var selectMonthText = selectMonth.options[selectMonthIndex].text;
+  var currentSelectText = document.getElementById('payment__select-month-text');
+
+  currentSelectText.innerHTML = selectMonthText;
+}
+
+// Функция трансляции выбранного option выбора года в стилизованный span
+function selectYear() {
+  var selectYear = document.getElementById('payment__select-year');
+  var selectYearIndex = selectYear.options.selectedIndex;
+  var selectYearText = selectYear.options[selectYearIndex].text;
+  var currentSelectText = document.getElementById('payment__select-year-text');
+
+  currentSelectText.innerHTML = selectYearText;
+}

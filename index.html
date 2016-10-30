@@ -12,23 +12,23 @@
         <ul class="page-header__navigation">
           <li class="page-header__logo">
             <a class="page-header__index-link" href="#">
-              <img src="../img/logo.png" alt="CHULAKOV.RU" width="176px" height="36px">
+              <img src="img/logo.png" alt="CHULAKOV.RU" width="176px" height="36px">
             </a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="">Первая ссылка</a>
+            <a class="page-header__link" href="#">Первая ссылка</a>
           </li>
           <li class="page-header__item page-header__item--active">
-            <a class="page-header__link " href="">Вторая ссылка (активная)</a>
+            <a class="page-header__link " href="#">Вторая ссылка (активная)</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="">Третья ссылка</a>
+            <a class="page-header__link" href="#">Третья ссылка</a>
           </li>
           <li class="page-header__item page-header__item--personal">
-            <a class="page-header__link" href="">Личный кабинет</a>
+            <a class="page-header__link" href="#">Личный кабинет</a>
           </li>
           <li class="page-header__item page-header__item--exit">
-            <a class="page-header__link page-header__link--exit" href="">Выйти</a>
+            <a class="page-header__link page-header__link--exit" href="#">Выйти</a>
           </li>
         </ul>
       </header>
@@ -64,34 +64,41 @@
               <input id="quaterGroup3" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
               <input id="quaterGroup4" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
               <span class="payment__card-expiry-date">Срок действия</span>
-              <select class="payment__select-month" name="payment__month">
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="10">11</option>
-                <option value="12">12</option>
-              </select>
-              <select class="payment__select-year" name="payment__year">
-                <option value="">2016</option>
-                <option value="">2017</option>
-                <option value="">2018</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
-                <option value="">2021</option>
-              </select>
+              <div class="payment__select-month-wrapper">
+                <span id="payment__select-month-text" class="payment__select-month-default"></span>
+                <select onChange="selectMonth()" id="payment__select-month" class="payment__select-month" name="payment__month">
+                  <option selected class="payment__select-month-default-text" value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="10">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="payment__select-year-wrapper">
+                <span id="payment__select-year-text" class="payment__select-year-default"></span>
+                <select onChange="selectYear()" id="payment__select-year" class="payment__select-year" name="payment__year">
+                  <option selected value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                </select>
+              </div>
               <input id="cardHolder" class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" required>
             </div>
             <div class="payment__card-back">
               <div class="payment__cvv-wrapper">
                 <span class="payment__cvv">Код CVV2/CVC2</span>
               <input id="cvv" class="payment__cvv-input" type="text" name="name" value="" pattern="[0-9]{3}" required>
+              <a href="#" class="payment__cvv-input-tip"></a>
               </div>
             </div>
           </div>
