@@ -9,12 +9,13 @@
   <body>
     <div class="container">
       <header class="page-header">
-        <ul class="page-header__navigation">
-          <li class="page-header__logo">
-            <a class="page-header__index-link" href="#">
-              <img src="img/logo.png" alt="CHULAKOV.RU" width="176px" height="36px">
-            </a>
-          </li>
+        <div class="page-header__logo">
+          <a class="page-header__index-link" href="#">
+            <img src="img/logo.png" alt="CHULAKOV.RU" width="176px" height="36px">
+          </a>
+          <div class="page-header__menu-button"></div>
+        </div>
+        <ul class="page-header__navigation invisible">
           <li class="page-header__item">
             <a class="page-header__link" href="#">Первая ссылка</a>
           </li>
@@ -59,14 +60,14 @@
           <div class="payment__card-wrapper">
             <div class="payment__card-front">
               <span class="payment__card-number">Номер карты</span>
-              <input id="quaterGroup1" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input id="quaterGroup2" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input id="quaterGroup3" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
-              <input id="quaterGroup4" type="text" class="payment__card-number-quarter-group" pattern="[0-9]{4}" required>
+              <input type="text" class="payment__card-number-quarter-group quaterGroup1" required>
+              <input type="text" class="payment__card-number-quarter-group quaterGroup2" required>
+              <input type="text" class="payment__card-number-quarter-group quaterGroup3" required>
+              <input type="text" class="payment__card-number-quarter-group quaterGroup4" required>
               <span class="payment__card-expiry-date">Срок действия</span>
               <div class="payment__select-month-wrapper">
-                <span id="payment__select-month-text" class="payment__select-month-default"></span>
-                <select onChange="selectMonth()" id="payment__select-month" class="payment__select-month" name="payment__month">
+                <span class="payment__select-month-default"></span>
+                <select onChange="selectMonth()" class="payment__select-month" name="payment__month">
                   <option selected class="payment__select-month-default-text" value="1">01</option>
                   <option value="2">02</option>
                   <option value="3">03</option>
@@ -82,8 +83,8 @@
                 </select>
               </div>
               <div class="payment__select-year-wrapper">
-                <span id="payment__select-year-text" class="payment__select-year-default"></span>
-                <select onChange="selectYear()" id="payment__select-year" class="payment__select-year" name="payment__year">
+                <span class="payment__select-year-default"></span>
+                <select onChange="selectYear()" class="payment__select-year" name="payment__year">
                   <option selected value="2016">2016</option>
                   <option value="2017">2017</option>
                   <option value="2018">2018</option>
@@ -92,12 +93,12 @@
                   <option value="2021">2021</option>
                 </select>
               </div>
-              <input id="cardHolder" class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" required>
+              <input class="payment__card-holder" type="text" name="card-holder" value="" placeholder="Держатель карты" required>
             </div>
             <div class="payment__card-back">
               <div class="payment__cvv-wrapper">
                 <span class="payment__cvv">Код CVV2/CVC2</span>
-              <input id="cvv" class="payment__cvv-input" type="text" name="name" value="" pattern="[0-9]{3}" required>
+              <input class="payment__cvv-input" type="text" name="name" value="" required>
               <a href="#" class="payment__cvv-input-tip"></a>
               </div>
             </div>

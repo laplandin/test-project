@@ -1,38 +1,38 @@
 // Функция для валидации полей формы
 function validate() {
-  var quaterRegExp = /[0-9]{4}/;
+  var quaterRegExp = /^[0-9]{4}$/;
   var cardHolderRegExp = /[A-Za-z]{4,}/;
-  var cvvRegExp = /[0-9]{3}/;
+  var cvvRegExp = /^[0-9]{3}$/;
 
 // Массив для хранения результатов проверки
   var result = [];
 
 // Проверка четырехзначных полей номера карты
   for (i = 1; i <= 4; i++) {
-    if (quaterRegExp.test(document.getElementById('quaterGroup'+i).value) == true) {
+    if (quaterRegExp.test(document.querySelector('.quaterGroup'+i).value) == true) {
       result[i] = true;
-      document.getElementById('quaterGroup'+i).style.boxShadow="inset 0 0 3px 1px #99c100";
+      document.querySelector('.quaterGroup'+i).style.border="1px solid #e5eaef";
     } else {
-      document.getElementById('quaterGroup'+i).style.border="1px solid red";
+      document.querySelector('.quaterGroup'+i).style.border="1px solid red";
       result[i] = false;
     }
   }
 
 // Проверка поля имя держателя
-  if (cardHolderRegExp.test(document.getElementById('cardHolder').value) == true) {
+  if (cardHolderRegExp.test(document.querySelector('.payment__card-holder').value) == true) {
     result.push(true);
-    document.getElementById('cardHolder').style.boxShadow="inset 0 0 3px 1px #99c100";
+    document.querySelector('.payment__card-holder').style.border="1px solid #e5eaef";
   } else {
-    document.getElementById('cardHolder').style.border="1px solid red";
+    document.querySelector('.payment__card-holder').style.border="1px solid red";
     result.push(false);
   }
 
 // Проверка поля кода безопасности
-  if (cvvRegExp.test(document.getElementById('cvv').value) == true) {
+  if (cvvRegExp.test(document.querySelector('.payment__cvv-input').value) == true) {
     result.push(true);
-    document.getElementById('cvv').style.boxShadow="inset 0 0 3px 1px #99c100";
+    document.querySelector('.payment__cvv-input').style.border="1px solid #e5eaef";
   } else {
-    document.getElementById('cvv').style.border="1px solid red";
+    document.querySelector('.payment__cvv-input').style.border="1px solid red";
     result.push(false);
   }
 
@@ -49,20 +49,36 @@ function isTrue(boolean) {
 
 // Функция трансляции выбранного option выбора месяца в стилизованный span
 function selectMonth() {
-  var selectMonth = document.getElementById('payment__select-month');
+  var selectMonth = document.querySelector('.payment__select-month');
   var selectMonthIndex = selectMonth.options.selectedIndex;
   var selectMonthText = selectMonth.options[selectMonthIndex].text;
-  var currentSelectText = document.getElementById('payment__select-month-text');
+  var currentSelectText = document.querySelector('.payment__select-month-default');
 
   currentSelectText.innerHTML = selectMonthText;
 }
 
 // Функция трансляции выбранного option выбора года в стилизованный span
 function selectYear() {
-  var selectYear = document.getElementById('payment__select-year');
+  var selectYear = document.querySelector('.payment__select-year');
   var selectYearIndex = selectYear.options.selectedIndex;
   var selectYearText = selectYear.options[selectYearIndex].text;
-  var currentSelectText = document.getElementById('payment__select-year-text');
+  var currentSelectText = document.querySelector('.payment__select-year-default');
 
   currentSelectText.innerHTML = selectYearText;
 }
+
+window.onload = function() {
+  selectMonth();
+  selectYear();
+}
+
+// Функция открывания меню
+function openMenu() {
+  var menuButton = document.querySelector('.page-header__menu-button');
+  var pageNav = document.querySelector('.page-header__navigation');
+
+  menuButton.classList.toggle('page-header__menu-button--opened');
+  pageNav.classList.toggle('invisible');
+}
+// Обработчик клика по меню
+document.querySelector('.page-header__menu-button').addEventListener('click', openMenu);
