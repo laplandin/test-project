@@ -351,13 +351,59 @@
     padding-bottom: 1px;
   }
 
-  .payment__info-property {
+  .payment__info-property,
+  .payment__info-value {
+    font-size: 14px;
+  }
+
+  .payment__card-data {
+    font-size: 18px;
+  }
+
+  .payment__card-front {
+    min-height: auto;
+  }
+
+  .payment__card-number {
+    margin-top: 10px;
     font-size: 14px;
   }
 
   .payment__card-number-quarter-group {
     width: 49px;
+    height: 34px;
     margin-right: 0;
+
+    font-size: 14px;
+  }
+
+  .payment__card-expiry-date {
+    font-size: 14px;
+  }
+
+  .payment__select-month-wrapper,
+  .payment__select-year-wrapper {
+    height: 34px;
+
+    &::after {
+      top: 14px;
+    }
+  }
+
+  .payment__select-month,
+  .payment__select-year {
+    height: 34px;
+  }
+
+  .payment__select-month-default,
+  .payment__select-year-default {
+    line-height: 34px;
+    font-size: 14px;
+  }
+
+  .payment__card-holder {
+    height: 34px;
+    font-size: 14px;
   }
 
   .payment__card-back {

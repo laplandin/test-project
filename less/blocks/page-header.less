@@ -123,8 +123,15 @@
 
 @media @tablet-widths {
   .page-header {
+    position: relative;
     width: 100%;
     float: none;
+  }
+
+  .page-header__navigation {
+    position: absolute;
+    width: 100%;
+    z-index: 50;
   }
 
   .page-header__menu-button {
